@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hummatli.kotlin.extensions.sample.MainActivity">
+
+    <TextView
+        android:id="@+id/tvChangeVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Visibility"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/tbChangeVisibility"
+        android:layout_marginLeft="22dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <ToggleButton
+        android:id="@+id/tbChangeVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvChangeFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Font"
+        android:textSize="20sp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangeVisibility"
+        app:layout_constraintLeft_toRightOf="@+id/tbChangeFont" />
+
+    <ToggleButton
+        android:id="@+id/tbChangeFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tbChangeVisibility" />
+
+</android.support.constraint.ConstraintLayout>
