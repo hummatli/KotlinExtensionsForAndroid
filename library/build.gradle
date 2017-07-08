@@ -1,6 +1,31 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'kotlin-extensions-for-android'
+
+    publishedGroupId = 'com.hummatli.library'
+    libraryName = 'KotlinExtensionsForAndroid'
+    artifact = 'kotlin-extensions-for-android'
+
+
+    libraryDescription = 'Library is a collection of useful extension functions for Android SDK'
+
+    siteUrl = 'https://github.com/hummatli/KotlinExtensionsForAndroid'
+    gitUrl = 'https://github.com/hummatli/KotlinExtensionsForAndroid.git'
+
+    libraryVersion = '0.9.2'
+
+    developerId = 'hummatli'
+    developerName = 'Sattar Hummatli'
+    developerEmail = 'settarxan@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -31,6 +56,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
+
+apply from: 'conf_for_maven/installv1.gradle'
+apply from: 'conf_for_maven/bintrayv1.gradle'
 repositories {
     mavenCentral()
 }
